@@ -17,7 +17,7 @@ main proc                             ; main procedure
 L1:                                   ; Enter the first loop
     mov eax,upperBound+lowerBound      ; Set eax to the sum of upperBound and lowerBound
     call randomRange                   ; call randomRange which creates random ints from 0 to eax
-    sub eax, upperBound                ; subtract the upperBound to get numbers within the desired range includen negatives
+    sub eax, upperBound                ; subtract the upperBound to get numbers within the desired range include negatives
     mov arrayd[esi*4],eax              ; Move the contents of eax into a the array 
                                         ; at position of source (index*4) to account for 32-bit size of random number
     inc esi                            ; Increment the index by one
